@@ -25,7 +25,7 @@ public class Circulo extends FiguraGeometrica {
     public float Perimetro(){
         return(float)(2*Math.PI*radio);
 }
-    public void drawFigura(Graphics g){
+    public void drawFigure(Graphics g){
         g.drawOval((int)(155-(radio/2)),((int)(110-radio/2)),radio, radio);
     }
 }

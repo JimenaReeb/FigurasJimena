@@ -152,7 +152,7 @@ public class Main extends javax.swing.JFrame {
             .addGap(0, 248, Short.MAX_VALUE)
         );
 
-        jLabel1.setText("Para dibujar una figura en el lienzo, escribe un radio y presiona \"Dibujar\"");
+        jLabel1.setText("Para dibujar una figura en el lienzo,eligela en \"Figuras\" y  escribe un radio o perímetro y presiona \"Dibujar\"");
 
         mnuFiguras.setText("Figuras");
         mnuFiguras.addActionListener(new java.awt.event.ActionListener() {
@@ -237,9 +237,18 @@ public class Main extends javax.swing.JFrame {
 
     private void btnDibujarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDibujarActionPerformed
         Circulo circulo;
-        circulo = new Circulo(Integer.parseInt(txtRadio.getText()));
+        Cuadrado cuadrado;
+        if(figure==0){
+            circulo = new Circulo(Integer.parseInt(txtRadio.getText()));
         txtPerimetro.setText(Float.toString(circulo.Area()));
-        circulo.drawFigura(pnlCanvas.getGraphics());
+        circulo.drawFigure(pnlCanvas.getGraphics());
+        }else if(figure==1){
+            cuadrado = new Cuadrado(Integer.parseInt(txtRadio.getText()));
+        txtPerimetro.setText(Float.toString(cuadrado.Perimetro()));
+        txtArea.setText(Float.toString(cuadrado.Area()));
+        cuadrado.drawFigure(pnlCanvas.getGraphics());
+        }
+        
     }//GEN-LAST:event_btnDibujarActionPerformed
 
     private void mniTrianguloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniTrianguloActionPerformed
@@ -247,7 +256,12 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_mniTrianguloActionPerformed
 
     private void mniCuadradoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniCuadradoActionPerformed
-        // TODO add your handling code here:
+       if(evt.getSource().equals(mniCuadrado)){
+           figure=1;
+           lblAltura.setVisible(false);
+           txtAltura.setVisible(false);
+           lblRadio.setText("Lado");
+       }
     }//GEN-LAST:event_mniCuadradoActionPerformed
 
     private void mnuFigurasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuFigurasActionPerformed

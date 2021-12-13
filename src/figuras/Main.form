@@ -352,7 +352,7 @@
     </Container>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Para dibujar una figura en el lienzo, escribe un radio y presiona &quot;Dibujar&quot;"/>
+        <Property name="text" type="java.lang.String" value="Para dibujar una figura en el lienzo,eligela en &quot;Figuras&quot; y  escribe un radio o per&#xed;metro y presiona &quot;Dibujar&quot;"/>
       </Properties>
     </Component>
   </SubComponents>

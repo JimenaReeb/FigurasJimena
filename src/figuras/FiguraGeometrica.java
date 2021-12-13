@@ -17,10 +17,10 @@ public abstract class FiguraGeometrica {
         return perimetro;
     }
 
-    public static void setPerimetro(float aPerimetro) {
-        perimetro = aPerimetro;
+    public static void setPerimetro(float perimetro) {
+        perimetro = perimetro;
     }
-    public abstract void drawFigura(Graphics g);
+    public abstract void drawFigure(Graphics g);
     public abstract float Area();
     public abstract float Perimetro();
     
